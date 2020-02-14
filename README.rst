@@ -21,6 +21,10 @@ environment variables ::
     export FLASK_APP=/path/to/autoapp.py
     export FLASK_DEBUG=1
 
+To successfully install one of the libraries with a dependency on openssl, ensure the ``LIBRARY_PATH`` is set ::
+
+    export LIBRARY_PATH=$LIBRARY_PATH:/path/to/openssl/lib/
+
 Then run the following commands to bootstrap your environment ::
 
     git clone https://github.com/gothinkster/flask-realworld-example-app.git
@@ -57,6 +61,18 @@ To open the interactive shell, run ::
     flask shell
 
 By default, you will have access to the flask ``app`` and models.
+
+
+Writing Tests
+-------------
+
+The tests use a WebTest testapp that wraps a WSGI application. It supports making REST calls to post and receive json.
+
+Helpful links:
+
+    https://docs.pylonsproject.org/projects/webtest/en/latest/testapp.html#making-json-requests
+
+    https://github.com/gothinkster/realworld/tree/master/api#realworld-api-spec
 
 
 Running Tests
