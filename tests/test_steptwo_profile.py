@@ -15,4 +15,5 @@ def _register_user(testapp, **kwargs):
 
 class TestProfile:
 
-    None
+    def test_stub(self, testapp):
+        None

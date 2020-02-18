@@ -1,0 +1,11 @@
+{
+    "python.pythonPath": "c:\\Users\\arcadia-demo\\dev\\flask-realworld-example-app\\env\\Scripts\\python.exe",
+    "restructuredtext.confPath": "",
+    "python.testing.pytestArgs": [
+        "tests",
+        "--disable-warnings"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
+}
