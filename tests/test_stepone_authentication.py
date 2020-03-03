@@ -18,9 +18,16 @@ class TestAuthenticate:
 
     def test_register_user(self, testapp):
         # register user and get response
+        userResponse = _register_user(testapp)
 
         # assert properties like email and valid token
-        None
+        email = userResponse.json['user']['email']
+        token = userResponse.json['user']['token']
+        username = userResponse.json['user']['username']
+       
+        assert token != ""
+        assert email == "mo@mo.mo"
+        assert username == "mo"
 
     def test_user_login(self, testapp):
         # register user
@@ -32,12 +39,17 @@ class TestAuthenticate:
 
     def test_get_user(self, testapp):
         # register user and get token
+        userResponse = _register_user(testapp)
+        token = userResponse.json['user']['token']
+        
 
-        # get user object using token and assert properties
-        None
 
     def test_register_already_registered_user(self, testapp):
         # expected status code == 422
+        code = 
+        assert code == 422
+
+
         None
 
     def test_update_user(self, testapp):
